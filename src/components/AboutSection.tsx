@@ -15,7 +15,7 @@ const AboutSection = () => {
             </div>
             <div className="absolute -bottom-4 -right-4 w-24 h-24 rounded-full bg-accent flex items-center justify-center shadow-soft">
               <span className="text-accent-foreground font-heading font-bold text-sm text-center leading-tight">
-                Since<br />2016
+                Since<br />2006
               </span>
             </div>
           </div>
