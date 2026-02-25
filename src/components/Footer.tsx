@@ -1,4 +1,5 @@
 import { Heart, MapPin, Phone, Mail } from "lucide-react";
+import logo from "@/assets/logo.png";
 
 const Footer = () => {
   return (
@@ -7,8 +8,8 @@ const Footer = () => {
         <div className="grid md:grid-cols-3 gap-10">
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center">
-                <Heart className="w-4 h-4 text-primary-foreground" />
+              <div className="w-10 h-10 rounded-full flex items-center justify-center">
+                <img src={logo} className="w-10 h-10" alt="taw-kabui" width="200" height="100" />
               </div>
               <span className="text-lg font-heading font-bold text-background">
                 Taw-Kabui

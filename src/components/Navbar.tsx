@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Heart, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import logo from "@/assets/logo.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -14,9 +15,7 @@ const Navbar = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-card/90 backdrop-blur-md border-b border-border">
       <div className="container mx-auto px-6 py-4 flex items-center justify-between">
         <button onClick={() => scrollTo("hero")} className="flex items-center gap-2">
-          <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center">
-            <Heart className="w-5 h-5 text-primary-foreground" />
-          </div>
+          <img src={logo} className="w-[80px] h-fit" alt="taw-kabui" width="200" height="100" />
           <span className="text-xl font-heading font-bold text-foreground">
             Taw-Kabui
           </span>
