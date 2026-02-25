@@ -1,6 +1,6 @@
 import { Heart } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import heroImage from "@/assets/hero-children.jpg";
+import heroImage from "@/assets/banner.jpg";
 
 const HeroSection = () => {
   const scrollTo = (id: string) => {
@@ -17,7 +17,7 @@ const HeroSection = () => {
         <img
           src={heroImage}
           alt="Children with disabilities learning and playing together"
-          className="w-full h-full object-cover opacity-30"
+          className="w-full h-full object-cover object-center opacity-20"
         />
       </div>
 

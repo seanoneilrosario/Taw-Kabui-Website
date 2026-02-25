@@ -10,7 +10,7 @@ const AboutSection = () => {
               <img
                 src={heroImage}
                 alt="Children learning together in an inclusive classroom"
-                className="w-full h-80 object-cover"
+                className="w-full h-80 object-cover object-top"
               />
             </div>
             <div className="absolute -bottom-4 -right-4 w-24 h-24 rounded-full bg-accent flex items-center justify-center shadow-soft">

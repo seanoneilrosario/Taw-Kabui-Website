@@ -1,5 +1,5 @@
-import programArts from "@/assets/program-arts.jpg";
-import programCommunity from "@/assets/program-community.jpg";
+import programArts from "@/assets/community-based.jpeg";
+import programCommunity from "@/assets/program-arts.jpg";
 
 const programs = [
   {

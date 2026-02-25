@@ -28,12 +28,20 @@ const Footer = () => {
                 <span>Barangay San Jose, Puerto Princesa City, Palawan</span>
               </div>
               <div className="flex items-center gap-2">
-                <Phone className="w-4 h-4 shrink-0" />
-                <span>Contact us for details</span>
+                  <Phone className="w-4 h-4 shrink-0" />
+                  <a href="tel:+63 953 2550950"><span>+63 953 2550950 (Globe)</span></a>
+              </div>
+              <div className="flex items-center gap-2">
+                  <Phone className="w-4 h-4 shrink-0" />
+                  <a href="tel:+63 938 0966131"><span>+63 938 0966131 (Smart)</span></a>
               </div>
               <div className="flex items-center gap-2">
                 <Mail className="w-4 h-4 shrink-0" />
-                <span>info@tawkabui.com</span>
+                <a href="mailto:tawkabui@yahoo.com.ph"><span>Tawkabui@yahoo.com.ph</span></a>
+              </div>
+              <div className="flex items-center gap-2">
+                <Mail className="w-4 h-4 shrink-0" />
+                <a href="mailto:tawkabuiforachildinc@gmail.com"><span>Tawkabuiforachildinc@gmail.com</span></a>
               </div>
             </div>
           </div>
