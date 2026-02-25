@@ -32,7 +32,7 @@ const DonateSection = () => {
 
         <Button variant="donate" size="xl" className="animate-pulse-warm">
           <Heart className="w-5 h-5 mr-2" />
-          Donate Now
+          <a href="https://paypal.me/TawkabuiforachildInc" target="_blank">Donate Now</a>
         </Button>
       </div>
     </section>
