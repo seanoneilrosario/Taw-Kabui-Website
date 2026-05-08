@@ -7,19 +7,26 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const scrollTo = (id: string) => {
-    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+    if (window.location.pathname !== "/") {
+      sessionStorage.setItem("scrollTo", id);
+      window.location.href = "/";
+      return;
+    }
+
+    document.getElementById(id)?.scrollIntoView({
+      behavior: "smooth",
+    });
+
     setIsOpen(false);
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-card/90 backdrop-blur-md border-b border-border">
+    <nav className="sticky top-0 left-0 right-0 z-50 bg-card/90 backdrop-blur-md border-b border-border">
       <div className="container mx-auto px-6 py-4 flex items-center justify-between">
-        <button onClick={() => scrollTo("hero")} className="flex items-center gap-2">
+        <a href="/" className="flex items-center gap-2">
           <img src={logo} className="w-[80px] h-fit" alt="taw-kabui" width="200" height="100" />
-          <span className="text-xl font-heading font-bold text-foreground">
-            Taw-Kabui
-          </span>
-        </button>
+          <span className="text-xl font-heading font-bold text-foreground">Taw-Kabui</span>
+        </a>
 
         {/* Desktop nav */}
         <div className="hidden md:flex items-center gap-8">
@@ -32,10 +39,12 @@ const Navbar = () => {
           <button onClick={() => scrollTo("vision")} className="text-muted-foreground hover:text-foreground font-medium transition-colors">
             Our Vision
           </button>
-          <Button onClick={() => scrollTo("donate")} variant="donate" size="lg">
-            <Heart className="w-4 h-4 mr-2" />
-            Donate Now
-          </Button>
+          <a href="/donation">
+            <Button variant="donate" size="lg">
+              <Heart className="w-4 h-4 mr-2" />
+              <span>Donate Now</span>
+            </Button>
+          </a>
         </div>
 
         {/* Mobile toggle */}
@@ -56,10 +65,12 @@ const Navbar = () => {
           <button onClick={() => scrollTo("vision")} className="block w-full text-left text-muted-foreground hover:text-foreground font-medium">
             Our Vision
           </button>
-          <Button onClick={() => scrollTo("donate")} variant="donate" className="w-full">
-            <Heart className="w-4 h-4 mr-2" />
-            Donate Now
-          </Button>
+          <a href="/donation">
+            <Button variant="donate" size="lg">
+              <Heart className="w-4 h-4 mr-2" />
+              <span>Donate Now</span>
+            </Button>
+          </a>
         </div>
       )}
     </nav>

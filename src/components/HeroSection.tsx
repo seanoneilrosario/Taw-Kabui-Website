@@ -35,10 +35,12 @@ const HeroSection = () => {
           love, empowerment, and community.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up" style={{ animationDelay: "0.7s" }}>
-          <Button onClick={() => scrollTo("donate")} variant="donate" size="xl" className="animate-pulse-warm">
-            <Heart className="w-5 h-5 mr-2" />
-            Donate Now
-          </Button>
+          <a href="/donation">
+            <Button variant="donate" size="xl" className="animate-pulse-warm">
+              <Heart className="w-5 h-5 mr-2" />
+              <span>Donate Now</span>
+            </Button>
+          </a>
           <Button onClick={() => scrollTo("about")} variant="heroOutline" size="xl">
             Learn More
           </Button>
